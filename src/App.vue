@@ -9,6 +9,7 @@
         name="Manuel Liuto"
         phone-number="+994 50 270 25 69"
         email-address="manuel@localhost.com"
+        is-favorite="1"
       ></friend-contact>
       <friend-contact
         name="lotito Piko"
