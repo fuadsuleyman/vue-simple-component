@@ -5,8 +5,16 @@
 
   <section>
     <ul>
-      <friend-contact></friend-contact>
-      <friend-contact></friend-contact>
+      <friend-contact
+        name="Manuel Liuto"
+        phone-number="+994 50 270 25 69"
+        email-address="manuel@localhost.com"
+      ></friend-contact>
+      <friend-contact
+        name="lotito Piko"
+        phone-number="+994 55 270 25 69"
+        email-address="lotito@localhost.com"
+      ></friend-contact>
     </ul>
   </section>
 </template>
@@ -15,7 +23,7 @@
 export default {
   data() {
     return {
-      FriendContact: [
+      friends: [
         {
           id: "manuel",
           name: "Manuel Lorenz",
