@@ -6,15 +6,12 @@
   <section>
     <ul>
       <friend-contact
-        name="Manuel Liuto"
-        phone-number="+994 50 270 25 69"
-        email-address="manuel@localhost.com"
-        is-favorite="1"
-      ></friend-contact>
-      <friend-contact
-        name="lotito Piko"
-        phone-number="+994 55 270 25 69"
-        email-address="lotito@localhost.com"
+        v-for="friend in friends"
+        :key="friend.id"
+        :name="friend.name"
+        :phone-number="friend.phone"
+        :email-address="friend.email"
+        :is-favorite="false"
       ></friend-contact>
     </ul>
   </section>

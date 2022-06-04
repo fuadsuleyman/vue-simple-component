@@ -1,0 +1,1 @@
+start app from terminal: npm vue serve

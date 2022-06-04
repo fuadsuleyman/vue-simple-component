@@ -1,8 +1,11 @@
 <template>
   <li>
-    <h2>{{ name }} {{ isFavorite == "1" ? "(Favotite)" : "" }}</h2>
+    <h2>{{ name }} {{ frienIsFavorite ? "(Favotite)" : "" }}</h2>
     <button @click="toggleDetails">
       {{ detailsAreVisible ? "Hide" : "Show" }} Details
+    </button>
+    <button @click="toggleFavorite">
+      {{ frienIsFavorite ? "Hide" : "Show" }} Favorite
     </button>
     <ul v-if="detailsAreVisible">
       <li><strong>Phone</strong> {{ phoneNumber }}</li>
@@ -28,29 +31,27 @@ export default {
       required: true,
     },
     isFavorite: {
-      type: String,
+      type: Boolean,
       required: false,
-      default: "0",
-      validator: function (value) {
-        return value === "0" || value === "1";
-      },
+      default: false,
+      // validator: function (value) {
+      //   return value === "0" || value === "1";
+      // },
     },
   },
   data() {
     return {
       detailsAreVisible: false,
-      friend: {
-        id: "manuel",
-        name: "Manuel Lorenz",
-        phone: "+994 50 270 25 69",
-        email: "manuel@localhost.com",
-      },
+      frienIsFavorite: this.isFavorite
     };
   },
   methods: {
     toggleDetails() {
       this.detailsAreVisible = !this.detailsAreVisible;
     },
+    toggleFavorite(){
+      this.frienIsFavorite = !this.frienIsFavorite
+    }
   },
 };
 </script>
