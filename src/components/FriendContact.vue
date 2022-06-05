@@ -43,6 +43,19 @@ export default {
       // },
     },
   },
+  // this below something as documantation, we provide information about emited methods
+  // first is simple version, second extended version
+  emits: ['toggle-favorite'],
+  // emits: {
+  //   'toggle-favorite': function(id) {
+  //     if (id){
+  //       return true;
+  //     } else {
+  //       console.warn("Id is missing!")
+  //       return false;
+  //     }
+  //   }
+  // },
   data() {
     return {
       detailsAreVisible: false,
