@@ -1,1 +1,1 @@
-start app from terminal: npm vue serve
+start app from terminal: npm run serve
